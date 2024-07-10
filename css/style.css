@@ -1,0 +1,52 @@
+/****** ACCORDIAN START *******/
+
+*{padding: 0; margin: 0;box-sizing: border-box;}
+
+.container-fluid{
+   background:linear-gradient(45deg ,#010758 , #490d61);
+   min-height: 100vh;
+ }
+
+.accordian-item{
+    margin-bottom: 30px;
+ }
+
+.accordian-title{
+    background-color: #ff2963;
+    color: #ffffff;
+    padding:10px 20px;
+    cursor: pointer;
+    transition: all 0.5s;
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+ }
+
+.accordian-title i{
+	position: absolute;
+	right: 30px;
+	font-size: 25px;
+	transition: all 0.5s;
+ }
+
+.accordian-item.active i{
+    transform: rotate(-180deg);
+ }
+
+.accordian-title:hover{
+	background-color: #d91248;
+ }
+
+.accordian-content{
+	background-color: #403d84;
+	padding:20px 20px;
+	display: none;
+	transition: all 0.5s;
+	text-align: justify;
+    color: #fff;
+    transition: all 2s ease;
+ }
+
+.accordian-item.active .accordian-content{
+	display: block;
+ }
