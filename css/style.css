@@ -5,6 +5,7 @@
 .container-fluid{
    background:linear-gradient(45deg ,#010758 , #490d61);
    min-height: 100vh;
+   padding: 0px 40px;
  }
 
 .accordian-item{
@@ -39,14 +40,43 @@
 
 .accordian-content{
 	background-color: #403d84;
-	padding:20px 20px;
-	display: none;
+    max-height: 0px;
+    overflow:hidden;
 	transition: all 0.5s;
 	text-align: justify;
     color: #fff;
-    transition: all 2s ease;
+    transition: 1s linear;
+    animation-name: accordian;
+    animation-duration: 0.8s linear;
+    animation-timing-function: linear;
+ }
+
+ .accordian-content p
+ {
+    padding: 20px 20px;
+    text-align: justify;
  }
 
 .accordian-item.active .accordian-content{
-	display: block;
+    max-height:150px;
  }
+
+ @keyframes accordian{
+   
+ }
+
+ /******* MEDIA QUERY ******/
+ @media screen and (max-width: 768px){
+.accordian-title{
+    font-size: 16px;
+}
+
+.accordian-item.active .accordian-content{
+    overflow: auto;
+}
+
+.accordian-content p{
+    font-size: 14px;
+ }
+
+}
